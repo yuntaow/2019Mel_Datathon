@@ -18,6 +18,8 @@
     "typescript": "^3.6.3"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "antd": "^3.23.4",
     "next": "^9.0.6",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"

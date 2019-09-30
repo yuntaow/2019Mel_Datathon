@@ -43,7 +43,7 @@ class Portal extends React.Component {
           {process.browser &&
             <Row type="flex" align="top" gutter={32}>
               <Col span={18} >
-                <div style={{height:"50vh", backgroundColor: "grey"}}>
+                <div style={{s backgroundColor: "grey"}}>
                   <Map />
                 </div>
               </Col>

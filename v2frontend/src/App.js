@@ -1,4 +1,5 @@
 
+import classes from './components/panel.module.css';
 import SideLayout from "./components/Layout"
 import "antd/dist/antd.css"
 import * as React from 'react';
@@ -111,10 +112,10 @@ class Portal extends React.Component {
 
           <Row gutter={32}>
             <Col span={12}>
-            <h1 style={{backgroundColor:"rgba(0,0,0,0.05)"}}>Historical Estimated Yield</h1>
+            <h1 className={classes.panelTitle}>Historical Estimated Yield</h1>
             </Col>
             <Col span={12}>
-            <h1 style={{backgroundColor:"rgba(0,0,0,0.05)"}}>Extreme Weather Condition</h1>
+            <h1 className={classes.panelTitle}>Extreme Weather Condition</h1>
             </Col>          
           </Row>
 

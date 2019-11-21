@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Team from './team';
 import Intro  from './Intro';
 import * as serviceWorker from './serviceWorker';
 import {
@@ -28,6 +29,9 @@ import store from "./redux/store";
               <Provider store={store}>
                 <App />
               </Provider>
+            </Route>
+            <Route path="/team">
+                <Team />
             </Route>
             <Redirect from="/" to="intro" />
           </Switch>

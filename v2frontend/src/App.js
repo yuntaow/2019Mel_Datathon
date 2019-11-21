@@ -8,9 +8,11 @@ import Npvi from "./components/npvi"
 import Yield from "./components/yield_chart"
 import Clasi from "./components/classification"
 import Timeline from "./components/timeline"
-
-import {Divider, Spin, Alert, Modal, Button, Input, Icon, Statistic, Row, Col,Card,Select } from "antd"
+import { connect } from "react-redux";
+import {message, Divider, Spin, Alert, Modal, Button, Input, Icon, Statistic, Row, Col,Card,Select } from "antd"
 import BankPanel from "./components/panel"
+import {  openModal, retrieveData} from "./redux/actions";
+
 const axios = require('axios');
 
 
@@ -31,11 +33,12 @@ class Portal extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = { visible: false,
+      loading: false, 
+      chart: null,
+      data:null};
   }
-  state = { visible: false,
-     loading: false, 
-     chart: null,
-     data:null};
+
 
   updateCoor = (new_data) => {
     this.setState({
@@ -48,6 +51,7 @@ class Portal extends React.Component {
   }
 
   showModal = () => {
+    this.setState({ loading: false  });
     this.setState({
       visible: true,
     });
@@ -58,19 +62,39 @@ class Portal extends React.Component {
     this.setState({
       visible: false,
     });
-
+    this.props.openModal(false)
   };
 
   trigger = (coordinates) =>  {
-    this.setState({ loading: true });
+    console.log(this.props.poly.flat())
+    this.setState({ loading: true  });
     setTimeout( ()=>{
-    axios.post('http://127.0.0.1:5000/', {
-      coordinates:  this.state.data,
+    axios.post('http://167.172.64.47:5000/yield_estimation', {
+      "ratoonStartDate" : "2017-09-23",
+      "harvestStartDate" : "2017-11-15",
+      "latlonlist": this.props.poly.flat(),
     })
     .then((response)=> {
       console.log(response.data);
       this.setState({ loading: false, visible: false});
+      if (response.data["errorCode"] == 1){
+        console.log("Error in the backend")
+        message.error('No sugarcane in selected area');
+        this.props.openModal(false)
+        this.setState({
+          visible: false,
+        });
 
+      }
+      else{
+        this.props.retrieveData(response.data)
+        this.props.openModal(false)
+
+        this.setState({
+          visible: false,
+        });
+        message.success('Success');
+      }
     })
     .catch(error => {
       console.log(error);
@@ -79,6 +103,11 @@ class Portal extends React.Component {
 
   }
   render() {
+    const { modal } = this.props
+    if (modal && !this.state.visible) {
+      this.showModal()
+    }
+
       return (
         <div>
         <link href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.2.0/mapbox-gl-geocoder.css' rel='stylesheet' />
@@ -90,7 +119,7 @@ class Portal extends React.Component {
               <Col span={16} >
                 <div style={{backgroundColor: "grey", height:"60vh"}}>
                     <Map updateCoor={this.updateCoor} getMapCoors={this.getMapCoors}/>
-                  <Modal
+                  {<Modal
                     title="Confirm"
                     visible={this.state.visible}
                     onOk={()=>this.trigger("dsaf")}
@@ -99,9 +128,9 @@ class Portal extends React.Component {
                     cancelText="Cancel"
                   >          
                   <Spin tip="Sending Coordinates" spinning={this.state.loading}>
-                    <p>Calculate</p>
+                    <p>Do you want to generate statisitcs for the selected area? (this might take up to 30 seconds)</p>
                   </Spin>
-                  </Modal>          
+                  </Modal> }         
                 </div>
               </Col>
               <Col span={8}>
@@ -119,7 +148,7 @@ class Portal extends React.Component {
             </Col>          
           </Row>
 
-          <Row>
+          <Row gutter={32}>
             <Col span={4} >
               <Npvi />
             </Col>
@@ -134,30 +163,33 @@ class Portal extends React.Component {
               <Timeline/> 
               </Row>
               <Row>
-              <Card style={{marginLeft: "20px", flex:"row", width:"90%"}}>
+              <Row style={{marginLeft: "20px", flex:"row", width:"90%"}}>
                 <Row gutter={8}>
                 <Col span={12}>
                  <Statistic
-                   title="Production"
-                   value={11.28}
+                   title="Flood Effect"
+                   value={0}
                    precision={2}
-                   valueStyle={{ color: '#3f8600' }}
-                   prefix={<Icon type="arrow-up" />}
+                   valueStyle={{ color: '#EE3936',fontWeight: "600"  }}
+                   prefix={<Icon type="caret-up" />}
                    suffix="%"
+                   style={{padding:"10px",backgroundColor:'rgba(0,0,0,0.05)'}}
+
                  />
                  </Col>
                    <Col span={12}>
                  <Statistic
-                   title="Land Utilisation"
-                   value={9.3}
+                   title="Drought Effect"
+                   value={0}
                    precision={2}
-                   valueStyle={{ color: '#cf1322' }}
-                   prefix={<Icon type="arrow-down" />}
+                   valueStyle={{ color: '#EE3936' ,fontWeight: "600" }}
+                   prefix={<Icon type="caret-down" />}
                    suffix="%"
+                   style={{padding:"10px", backgroundColor:'rgba(0,0,0,0.05)'}}
                  />
                  </Col>
                  </Row>
-                 </Card>
+                 </Row>
               </Row>
             </Col>
           </Row>
@@ -169,6 +201,11 @@ class Portal extends React.Component {
 }
 
 
-export default () => (
-  <SideLayout content={<Portal />} />
-)
+const mapStateToProps = state => {
+  console.log("modal",state.mapcor);
+  return { modal: state.mapcor.modal, poly:state.mapcor.poly}
+};
+
+const Portal2 = connect(mapStateToProps,{openModal,retrieveData})(Portal)
+
+export default () => <SideLayout content={<Portal2 />} />

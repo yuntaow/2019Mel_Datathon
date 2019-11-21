@@ -1,9 +1,11 @@
 import { SET_CORS } from "../actionTypes";
+import { OPEN_MODAL } from "../actionTypes";
 
 const initialState = {
     lon:0,
     lat:0,
-    poly: []
+    poly: [],
+    modal: false,
 };
 
 const mapcor = (state = initialState, action) => {
@@ -14,6 +16,13 @@ const mapcor = (state = initialState, action) => {
         lon: lon,
         lat: lat,
         poly: poly
+      }
+    }
+    case OPEN_MODAL: {
+      const { modal } = action.payload;
+      return {
+        ...state,
+        modal: modal 
       }
     }
     default: {

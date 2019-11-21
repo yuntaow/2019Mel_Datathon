@@ -2,30 +2,16 @@ import React, { PureComponent } from 'react';
 import {
   ResponsiveContainer, ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
+import { connect } from "react-redux";
 
-const data = [
-  {
-    name: 'Page A', uv: 590, pv: 800, amt: 1400,
-  },
-  {
-    name: 'Page B', uv: 868, pv: 967, amt: 1506,
-  },
-  {
-    name: 'Page C', uv: 1397, pv: 1098, amt: 989,
-  },
-  {
-    name: 'Page D', uv: 1480, pv: 1200, amt: 1228,
-  },
-  {
-    name: 'Page E', uv: 1520, pv: 1108, amt: 1100,
-  },
-  {
-    name: 'Page F', uv: 1400, pv: 680, amt: 1700,
-  },
-];
-
-export default class npvi extends PureComponent {
+{/* <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
+<Bar dataKey="pv" barSize={20} fill="#413ea0" /> */}
+class npvi extends PureComponent {
   static jsfiddleUrl = '//jsfiddle.net/alidingling/9wnuL90w/';
+
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     return (
@@ -34,19 +20,17 @@ export default class npvi extends PureComponent {
           <ComposedChart
             width={200}
             height={400}
-            data={data}
+            data={this.props.data}
             margin={{
               top: 20, right: 0, bottom: 20, left: -10,
             }}
           >
             <CartesianGrid stroke="#f5f5f5" />
-            <XAxis dataKey="name" />
             <YAxis />
+            <XAxis dataKey="date" />
             <Tooltip />
             <Legend />
-            <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
-            <Bar dataKey="pv" barSize={20} fill="#413ea0" />
-            <Line type="monotone" dataKey="uv" stroke="#ff7300" />
+            <Line type="monotone" dataKey="ndvi" stroke="#ff7300" />
           </ComposedChart>
         </ResponsiveContainer>
       </div>
@@ -54,3 +38,15 @@ export default class npvi extends PureComponent {
   }
 }
   
+
+
+const mapStateToProps = state => {
+  console.log("location",state.retrieveData);
+
+  const a1 = state.retrieveData.mean_ndvi_list
+  const a2 = state.retrieveData.date_list
+  const result = a1.map((item,index) => {return [item,a2[index]]})
+  return {data:result.map(x => {return({ndvi:x[0],date:x[1]})}) };
+};
+
+export default connect(mapStateToProps)(npvi);

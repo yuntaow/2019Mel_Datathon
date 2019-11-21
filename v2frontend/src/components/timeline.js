@@ -23,16 +23,12 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-    <div style={{ marginLeft:"20px",marginTop:10,marginBottom:20, overflowX: "auto", width:"90%"}}>
+    <div style={{height:"150px",marginLeft:"20px",marginTop:10,marginBottom:20, overflowX: "auto", width:"90%"}}>
     <Steps current={1} progressDot={customDot} style={{ marginTop:30}}>
-      <Step title="Finished" description="You can hover on the dot." />
-      <Step title="In Progress" description="You can hover on the dot." />
-      <Step title="Waiting" description="You can hover on the dot." />
-      <Step title="Waiting" description="You can hover on the dot." />
-      <Step title="Finished" description="You can hover on the dot." />
-      <Step title="In Progress" description="You can hover on the dot." />
-      <Step title="Waiting" description="You can hover on the dot." />
-      <Step title="Waiting" description="You can hover on the dot." />
+      <Step title="No Drought" description="Nov" />
+      <Step title="No Drought" description="Dec" />
+      <Step title="No Drought" description="Jan" />
+      <Step title="No Drought" description="Feb" />
     </Steps>
     </div>
     );

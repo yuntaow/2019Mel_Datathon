@@ -1,81 +1,50 @@
 import React, { PureComponent } from 'react';
-import { Treemap } from 'recharts';
+import { Treemap,PieChart,Pie } from 'recharts';
+import {
+  LineChart, ResponsiveContainer, ComposedChart, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+} from 'recharts';
+import { connect } from "react-redux";
 
-const data = [
 
-  {
-    name: 'operator',
-    children: [
-      {
-        name: 'distortion',
-        children: [
-          { name: 'BifocalDistortion', size: 4461 },
-          { name: 'Distortion', size: 6314 },
-          { name: 'FisheyeDistortion', size: 3444 },
-        ],
-      },
-      {
-        name: 'encoder',
-        children: [
-          { name: 'ColorEncoder', size: 3179 },
-          { name: 'Encoder', size: 4060 },
-          { name: 'PropertyEncoder', size: 4138 },
-          { name: 'ShapeEncoder', size: 1690 },
-          { name: 'SizeEncoder', size: 1830 },
-        ],
-      },
-      {
-        name: 'filter',
-        children: [
-          { name: 'FisheyeTreeFilter', size: 5219 },
-          { name: 'GraphDistanceFilter', size: 3165 },
-          { name: 'VisibilityFilter', size: 3509 },
-        ],
-      },
-      { name: 'IOperator', size: 1286 },
-      {
-        name: 'label',
-        children: [
-          { name: 'Labeler', size: 9956 },
-          { name: 'RadialLabeler', size: 3899 },
-          { name: 'StackedAreaLabeler', size: 3202 },
-        ],
-      },
-      {
-        name: 'layout',
-        children: [
-          { name: 'AxisLayout', size: 6725 },
-          { name: 'BundledEdgeRouter', size: 3727 },
-          { name: 'CircleLayout', size: 9317 },
-          { name: 'CirclePackingLayout', size: 12003 },
-          { name: 'DendrogramLayout', size: 4853 },
-          { name: 'ForceDirectedLayout', size: 8411 },
-        ],
-      },
-      { name: 'Operator', size: 2490 },
-      { name: 'OperatorList', size: 5248 },
-      { name: 'OperatorSequence', size: 4190 },
-      { name: 'OperatorSwitch', size: 2581 },
-      { name: 'SortOperator', size: 2023 },
-    ],
-  },
-];
-
-export default class Example extends PureComponent {
+class Example extends PureComponent {
   static jsfiddleUrl = 'https://jsfiddle.net/alidingling/u702a3Lx/';
 
   render() {
     return (
-      <Treemap
-        width={200}
-        height={250}
-        data={data}
-        dataKey="size"
-        ratio={4 / 3}
-        stroke="#fff"
-        fill="#8884d8"
-        style={{margin:10}}
-      />
+      <div style={{ width: '100%', height: 300 }}>
+        <ResponsiveContainer>
+          <ComposedChart
+            width={200}
+            height={400}
+            data={this.props.data}
+            margin={{
+              top: 20, right: 0, bottom: 20, left: -10,
+            }}
+          >
+            <CartesianGrid stroke="#f5f5f5" />
+            <YAxis />
+            <XAxis dataKey="name" />
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="amount" barSize={20} fill="#413ea0" />
+            </ComposedChart>
+        </ResponsiveContainer>
+      </div>
     );
   }
 }
+
+const mapStateToProps = state => {
+  const a1 = state.retrieveData.type_clustering
+  var arr = [];
+  for (var key in a1) {
+      if (a1.hasOwnProperty(key)) {
+          arr.push( [ key, a1[key] ] );
+      }
+  }
+  
+  return {data:arr.map(x => {return({name:x[0],amount:x[1]})})};
+
+};
+
+export default connect(mapStateToProps)(Example);

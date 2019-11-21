@@ -10,7 +10,7 @@ import '@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
 import ControlPanel from './control-panel';
 import {getFeatureStyle, getEditHandleStyle} from './style';
 
-import { setCors } from "../redux/actions";
+import { setCors, openModal,retrieveData } from "../redux/actions";
 import { connect } from "react-redux";
 
 
@@ -23,9 +23,10 @@ class Mapp extends Component {
     this._editorRef = null;
     this.state = {
       viewport: {
-        longitude: -91.874,
-        latitude: 42.76,
-        zoom: 12
+        longitude: 144.8661,
+        latitude: -37.853,
+        zoom: 9
+
       },
       mode: EditorModes.READ_ONLY,
       selectedFeatureIndex: null,
@@ -91,6 +92,7 @@ class Mapp extends Component {
     console.log(JSON.stringify(data))
     console.log(JSON.stringify({lon:data[0][0],lat:data[0][1],poly:data}))
     this.props.setCors({lon:data[0][0],lat:data[0][1],poly:data})
+    this.props.openModal(true)
   };
 
   _renderDrawTools = () => {
@@ -151,4 +153,4 @@ class Mapp extends Component {
 }
 
 
-export default connect(null, {setCors})(Mapp)
+export default connect(null, {setCors,openModal,retrieveData})(Mapp)

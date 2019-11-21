@@ -53,6 +53,23 @@ class BankPanel extends React.Component {
     }
   };
 
+  getPrice = country => {
+    switch (country) {
+      case "Australia":
+        return 0.82;
+      case "Korea":
+        return 0.83;
+      case "Indonesia":
+        return 0.84;
+      case "Malaysia":
+        return 0.6;
+      case "Thailand":
+        return 0.5;
+      default:
+        return 0.82;
+    }
+  };
+
   render() {
     return (
       <Col>
@@ -75,7 +92,7 @@ class BankPanel extends React.Component {
                   <img className={classes.countryFlag} src={this.getCountry( item )} />
                 </Typography.Text>
                 {item}
-                <span style={{ float: "right" }}>$10</span>
+            <span style={{ float: "right" }}>${this.getPrice(item)}</span>
               </List.Item>
             )}
           />
@@ -91,22 +108,26 @@ class BankPanel extends React.Component {
             <Row gutter={8}>
               <Col span={12}>
                 <Statistic
-                  title="Production"
-                  value={11.28}
+                  title="Estimated Sugar Volume "
+                  value={this.props.tons}
                   precision={2}
                   valueStyle={{ color: "#6CD56D", fontWeight: "600" }}
                   prefix={<Icon type="caret-up" />}
-                  suffix="%"
+                  suffix="t"
+                  style={{padding:"10px",backgroundColor:'rgba(0,0,0,0.05)'}}
+
                 />
               </Col>
               <Col span={12}>
                 <Statistic
-                  title="Land Utilisation"
-                  value={9.3}
+                  title="Estimated Sugar Content "
+                  value={this.props.content}
                   precision={2}
-                  valueStyle={{ color: "#EE3936", fontWeight: "600" }}
+                  valueStyle={{ color: "#6CD56D", fontWeight: "600" }}
                   prefix={<Icon type="caret-down" />}
-                  suffix="%"
+                  suffix="t"
+                  style={{padding:"10px",backgroundColor:'rgba(0,0,0,0.05)'}}
+
                 />
               </Col>
             </Row>
@@ -122,22 +143,26 @@ class BankPanel extends React.Component {
             <Row gutter={8}>
               <Col span={12}>
                 <Statistic
-                  title="Production"
-                  value={11.28}
+                  title="Estimated Yield"
+                  value={this.props.ey}
                   precision={2}
                   valueStyle={{ color: "#6CD56D", fontWeight: "600" }}
                   prefix={<Icon type="caret-up" />}
-                  suffix="%"
+                  suffix="t/ha"
+                  style={{padding:"10px",backgroundColor:'rgba(0,0,0,0.05)'}}
+
                 />
               </Col>
               <Col span={12}>
                 <Statistic
-                  title="Land Utilisation"
-                  value={9.3}
+                  title="Estimated Revenue"
+                  value={this.props.rev/100}
                   precision={2}
-                  valueStyle={{ color: "#EE3936", fontWeight: "600" }}
+                  valueStyle={{ color: "#6CD56D", fontWeight: "600" }}
                   prefix={<Icon type="caret-down" />}
-                  suffix="%"
+                  suffix="$AUD"
+                  style={{padding:"10px",backgroundColor:'rgba(0,0,0,0.05)'}}
+
                 />
               </Col>
             </Row>
@@ -149,8 +174,13 @@ class BankPanel extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log(state.mapcor);
-  return { lat: state.mapcor.lat, lon: state.mapcor.lon };
+  console.log("location",state.retrieve);
+
+  const ey = state.retrieveData.estimated_yield
+  const rev = state.retrieveData.revenue
+  const tons = state.retrieveData.estimated_tons
+  const content = state.retrieveData.sugar_content
+  return { lon:state.mapcor.lon, lat:state.mapcor.lat, ey:ey, rev:rev, tons:tons, content:content};
 };
 
 export default connect(mapStateToProps)(BankPanel);

@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/2019Mel_Datathon/static/css/main.773cbebd.chunk.css",
+    "main.js": "/2019Mel_Datathon/static/js/main.21fd8a09.chunk.js",
+    "main.js.map": "/2019Mel_Datathon/static/js/main.21fd8a09.chunk.js.map",
+    "runtime-main.js": "/2019Mel_Datathon/static/js/runtime-main.c55dbc69.js",
+    "runtime-main.js.map": "/2019Mel_Datathon/static/js/runtime-main.c55dbc69.js.map",
+    "static/css/2.aa8bac49.chunk.css": "/2019Mel_Datathon/static/css/2.aa8bac49.chunk.css",
+    "static/js/2.7faaea2e.chunk.js": "/2019Mel_Datathon/static/js/2.7faaea2e.chunk.js",
+    "static/js/2.7faaea2e.chunk.js.map": "/2019Mel_Datathon/static/js/2.7faaea2e.chunk.js.map",
+    "index.html": "/2019Mel_Datathon/index.html",
+    "precache-manifest.4ce4dc2bf3507525f7702a12ab035a33.js": "/2019Mel_Datathon/precache-manifest.4ce4dc2bf3507525f7702a12ab035a33.js",
+    "service-worker.js": "/2019Mel_Datathon/service-worker.js",
+    "static/css/2.aa8bac49.chunk.css.map": "/2019Mel_Datathon/static/css/2.aa8bac49.chunk.css.map",
+    "static/css/main.773cbebd.chunk.css.map": "/2019Mel_Datathon/static/css/main.773cbebd.chunk.css.map",
+    "static/media/1.jpeg": "/2019Mel_Datathon/static/media/1.6f2fb8c1.jpeg",
+    "static/media/2.jpeg": "/2019Mel_Datathon/static/media/2.da9f6711.jpeg",
+    "static/media/3.jpeg": "/2019Mel_Datathon/static/media/3.7eee0cd9.jpeg",
+    "static/media/logo-default.png": "/2019Mel_Datathon/static/media/logo-default.583f9c69.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c55dbc69.js",
+    "static/css/2.aa8bac49.chunk.css",
+    "static/js/2.7faaea2e.chunk.js",
+    "static/css/main.773cbebd.chunk.css",
+    "static/js/main.21fd8a09.chunk.js"
+  ]
+}

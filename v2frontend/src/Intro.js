@@ -24,7 +24,7 @@ export default class Intro extends React.Component {
 }
   render() {
     return (
-        <div className="bg">
+        <div style={{backgroundColor:"#e5edf2"}}>
             <Carousel style={{height:"100vh"}}>
                 <div className="ppt-holder">
                   <img className="ppt" src={require("./1.jpeg")} alt="Italian Trulli"/>

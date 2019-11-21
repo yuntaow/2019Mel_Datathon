@@ -1,13 +1,13 @@
 .bg {
     overflow-y: hidden;
     height: 100vh;
-    background: linear-gradient(270deg, #eea359, #331ed7);
-    background-size: 400% 400%;
-
-    -webkit-animation: AnimationName 3s ease infinite;
-    -moz-animation: AnimationName 3s ease infinite;
-    animation: AnimationName 3s ease infinite;
-
+    background: linear-gradient(270deg, #368736, #ffba5a, #3e31f5);
+    background-size: 600% 600%;
+    
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    
     @-webkit-keyframes AnimationName {
         0%{background-position:0% 50%}
         50%{background-position:100% 50%}

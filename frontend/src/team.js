@@ -37,7 +37,7 @@ class Portal extends React.Component {
                     <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                   }
                   title="Victoria"
-                  description=""
+                  description="I am a business/market analyst."
                 />
             </Card>
             <Card
@@ -51,7 +51,7 @@ class Portal extends React.Component {
                     <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                   }
                   title="Cedric"
-                  description=""
+                  description="i am a designer."
                 />
             </Card>
             <Card
@@ -65,7 +65,7 @@ class Portal extends React.Component {
                     <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                   }
                   title= "Alan"
-                  description=""
+                  description="I am a data engineer."
                 />
             </Card>
             <Card
@@ -79,7 +79,7 @@ class Portal extends React.Component {
                     <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                   }
                   title="Steven"
-                  description=""
+                  description="I am a geo/satellite expert."
                 />
             </Card>
             <Card
@@ -93,7 +93,7 @@ class Portal extends React.Component {
                     <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                   }
                   title="Timothy"
-                  description="I am a software engineer;"
+                  description="I am a software engineer."
                 />
             </Card>
           </div>

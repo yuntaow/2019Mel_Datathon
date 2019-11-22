@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "//yuntaow.github.io/2019Mel_Datathon/precache-manifest.42d1bcee984398321ddecc9bec98756b.js"
+  "//yuntaow.github.io/2019Mel_Datathon/precache-manifest.ccffab0147823c57e5ffb163de3aa1ca.js"
 );
 
 self.addEventListener('message', (event) => {

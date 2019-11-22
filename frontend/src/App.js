@@ -34,7 +34,7 @@ class Portal extends React.Component {
   constructor(props) {
     super(props);
     this.state = { visible: false,
-      loading: false, 
+      loading: false,
       chart: null,
       data:null};
   }
@@ -117,7 +117,7 @@ class Portal extends React.Component {
           <Row>
             <Row type="flex" align="top" gutter={16}>
               <Col span={16} >
-                <div style={{backgroundColor: "grey", height:"60vh"}}>
+                <div style={{backgroundColor: "grey", height:"630px"}}>
                     <Map updateCoor={this.updateCoor} getMapCoors={this.getMapCoors}/>
                   {<Modal
                     title="Confirm"
@@ -126,11 +126,11 @@ class Portal extends React.Component {
                     onCancel={this.hideModal}
                     okText="Confirm"
                     cancelText="Cancel"
-                  >          
+                  >
                   <Spin tip="Sending Coordinates" spinning={this.state.loading}>
                     <p>Do you want to generate statisitcs for the selected area? (this might take up to 30 seconds)</p>
                   </Spin>
-                  </Modal> }         
+                  </Modal> }
                 </div>
               </Col>
               <Col span={8}>
@@ -145,7 +145,7 @@ class Portal extends React.Component {
             </Col>
             <Col span={12}>
             <h1 className={classes.panelTitle}>Extreme Weather Condition</h1>
-            </Col>          
+            </Col>
           </Row>
 
           <Row gutter={32}>
@@ -153,14 +153,14 @@ class Portal extends React.Component {
               <Npvi />
             </Col>
             <Col span={4}>
-              <Yield/> 
+              <Yield/>
             </Col>
             <Col span={4}>
-              <Clasi/> 
+              <Clasi/>
             </Col>
             <Col span={12}>
               <Row>
-              <Timeline/> 
+              <Timeline/>
               </Row>
               <Row>
               <Row style={{marginLeft: "20px", flex:"row", width:"90%"}}>

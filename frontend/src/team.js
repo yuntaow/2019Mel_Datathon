@@ -14,22 +14,22 @@ class Portal extends React.Component {
     state = {
         loading: false,
       };
-    
+
       onChange = checked => {
         this.setState({ loading: !checked });
       };
-    
+
       render() {
         const { loading } = this.state;
-    
+
         return (
           <div style={{display:"flex", flexWrap:'wrap'}}>
-              
+
 
             <Card
               style={{ margin:"10px",width: 500, marginTop: 16 }}
               actions={[
-                <Icon type="linkedin" key="setting" onClick={()=>{window.open("https://www.linkedin.com/in/timothy-wang-yt/")}} />,
+                <Icon type="linkedin" key="setting" onClick={()=>{window.open("https://www.linkedin.com/in/victoria-zhang/")}} />,
               ]}
             >
                 <Meta
@@ -39,11 +39,11 @@ class Portal extends React.Component {
                   title="Victoria"
                   description=""
                 />
-            </Card>  
+            </Card>
             <Card
               style={{ margin:"10px",width: 500, marginTop: 16 }}
               actions={[
-                <Icon type="linkedin" key="setting" onClick={()=>{window.open("https://www.linkedin.com/in/timothy-wang-yt/")}} />,
+                <Icon type="linkedin" key="setting" onClick={()=>{window.open("")}} />,
               ]}
             >
                 <Meta
@@ -53,11 +53,11 @@ class Portal extends React.Component {
                   title="Cedric"
                   description=""
                 />
-            </Card>  
+            </Card>
             <Card
               style={{ margin:"10px",width: 500, marginTop: 16 }}
               actions={[
-                <Icon type="linkedin" key="setting" onClick={()=>{window.open("https://www.linkedin.com/in/timothy-wang-yt/")}} />,
+                <Icon type="linkedin" key="setting" onClick={()=>{window.open("")}} />,
               ]}
             >
                 <Meta
@@ -67,11 +67,11 @@ class Portal extends React.Component {
                   title= "Alan"
                   description=""
                 />
-            </Card>  
+            </Card>
             <Card
               style={{ margin:"10px",width: 500, marginTop: 16 }}
               actions={[
-                <Icon type="linkedin" key="setting" onClick={()=>{window.open("https://www.linkedin.com/in/timothy-wang-yt/")}} />,
+                <Icon type="linkedin" key="setting" onClick={()=>{window.open("")}} />,
               ]}
             >
                 <Meta
@@ -81,7 +81,7 @@ class Portal extends React.Component {
                   title="Steven"
                   description=""
                 />
-            </Card>  
+            </Card>
             <Card
               style={{ margin:"10px",width: 500, marginTop: 16 }}
               actions={[
@@ -95,7 +95,7 @@ class Portal extends React.Component {
                   title="Timothy"
                   description="I am a software engineer;"
                 />
-            </Card>  
+            </Card>
           </div>
         );
       }

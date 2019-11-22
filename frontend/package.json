@@ -2,7 +2,7 @@
   "homepage": "//yuntaow.github.io/2019Mel_Datathon/",
   "name": "v2frontend",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@mapbox/mapbox-gl-draw": "^1.1.2",
     "antd": "^3.24.3",

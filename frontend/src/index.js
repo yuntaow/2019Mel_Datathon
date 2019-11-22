@@ -5,6 +5,8 @@ import App from './App';
 import Team from './team';
 import Intro  from './Intro';
 import * as serviceWorker from './serviceWorker';
+import BrowserRouter from 'react-router-dom/BrowserRouter'
+
 import {
     Redirect,
     BrowserRouter as Router,
@@ -35,7 +37,7 @@ import store from "./redux/store";
             <Route path="/team">
                 <Team />
             </Route>
-            <Route path="/dashboard">
+            <Route path="/">
               <Provider store={store}>
                 <App />
               </Provider>
@@ -46,7 +48,9 @@ import store from "./redux/store";
 }
 
 
-ReactDOM.render(<Root />, document.getElementById('root'));
+ReactDOM.render(   <BrowserRouter basename={process.env.PUBLIC_URL}>
+<Root />   </BrowserRouter>
+, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

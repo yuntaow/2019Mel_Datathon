@@ -33,7 +33,7 @@ import store from "./redux/store";
             <Route path="/team">
                 <Team />
             </Route>
-            <Redirect from="/" to="intro" />
+            <Redirect from="/" to="dashboard" />
           </Switch>
       </Router>
     );

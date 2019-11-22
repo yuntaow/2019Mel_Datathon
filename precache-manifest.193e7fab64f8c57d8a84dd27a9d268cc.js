@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "22858d771f0f165054fd5bf8157f2c60",
+    "revision": "021e50969a9b452d1b9b136efb661847",
     "url": "//yuntaow.github.io/2019Mel_Datathon/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "//yuntaow.github.io/2019Mel_Datathon/static/css/2.aa8bac49.chunk.css"
   },
   {
-    "revision": "65cba2ec6006a22ce847",
+    "revision": "4ebdb987c7b269fa3c39",
     "url": "//yuntaow.github.io/2019Mel_Datathon/static/css/main.9a72dc73.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "//yuntaow.github.io/2019Mel_Datathon/static/js/2.c6dd9ff2.chunk.js"
   },
   {
-    "revision": "65cba2ec6006a22ce847",
-    "url": "//yuntaow.github.io/2019Mel_Datathon/static/js/main.9029f0c0.chunk.js"
+    "revision": "4ebdb987c7b269fa3c39",
+    "url": "//yuntaow.github.io/2019Mel_Datathon/static/js/main.3d9e96a0.chunk.js"
   },
   {
     "revision": "237e8be1f78ce1316136",

@@ -5,6 +5,7 @@ import "antd/dist/antd.css"
 import * as React from 'react';
 import "./team.css"
 import { Skeleton, Switch, Card, Icon, Avatar } from 'antd';
+import logo from './assets/team.PNG';
 
 const axios = require('axios');
 const { Meta } = Card;
@@ -23,9 +24,8 @@ class Portal extends React.Component {
         const { loading } = this.state;
 
         return (
+          <div>
           <div style={{display:"flex", flexWrap:'wrap'}}>
-
-
             <Card
               style={{ margin:"10px",width: 500, marginTop: 16 }}
               actions={[
@@ -43,7 +43,7 @@ class Portal extends React.Component {
             <Card
               style={{ margin:"10px",width: 500, marginTop: 16 }}
               actions={[
-                <Icon type="linkedin" key="setting" onClick={()=>{window.open("")}} />,
+                <Icon type="linkedin" key="setting" onClick={()=>{window.open("https://www.linkedin.com/in/cedric-le-mercier/")}} />,
               ]}
             >
                 <Meta
@@ -97,6 +97,10 @@ class Portal extends React.Component {
                 />
             </Card>
           </div>
+          <div style={{marginRight:"auto",marginLeft:"auto",display:"block",width:"40%"}}><img src={logo} style={{height:"300px",margin:"16px"}}/></div>
+
+          </div>
+
         );
       }
 }

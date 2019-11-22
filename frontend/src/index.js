@@ -13,6 +13,8 @@ import {
     Link
   } from "react-router-dom";
 import { Provider } from 'react-redux'
+
+
 import store from "./redux/store";
 
   export default function Root() {
@@ -33,7 +35,11 @@ import store from "./redux/store";
             <Route path="/team">
                 <Team />
             </Route>
-            <Redirect from="/" to="dashboard" />
+            <Route path="/dashboard">
+              <Provider store={store}>
+                <App />
+              </Provider>
+            </Route>
           </Switch>
       </Router>
     );

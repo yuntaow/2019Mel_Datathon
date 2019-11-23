@@ -129,7 +129,7 @@ class Portal extends React.Component {
                     okText="Confirm"
                     cancelText="Cancel"
                   >
-                  <Spin tip="Sending Coordinates" spinning={this.state.loading}>
+                  <Spin tip="Waiting for the backend" spinning={this.state.loading}>
                     <p>Do you want to generate statisitcs for the selected area? (this might take up to 30 seconds)</p>
                   </Spin>
                   </Modal> }
@@ -204,7 +204,6 @@ class Portal extends React.Component {
 
 
 const mapStateToProps = state => {
-  console.log("modal",state.mapcor);
   return { modal: state.mapcor.modal, poly:state.mapcor.poly}
 };
 

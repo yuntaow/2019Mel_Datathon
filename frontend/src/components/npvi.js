@@ -41,8 +41,6 @@ class npvi extends PureComponent {
 
 
 const mapStateToProps = state => {
-  console.log("location",state.retrieveData);
-
   const a1 = state.retrieveData.mean_ndvi_list
   const a2 = state.retrieveData.date_list
   const result = a1.map((item,index) => {return [item,a2[index]]})

@@ -89,8 +89,6 @@ class Mapp extends Component {
     // this.props.updateCoor([a.data])
 
     const data = a.data[0]["geometry"]["coordinates"][0]
-    console.log(JSON.stringify(data))
-    console.log(JSON.stringify({lon:data[0][0],lat:data[0][1],poly:data}))
     this.props.setCors({lon:data[0][0],lat:data[0][1],poly:data})
     this.props.openModal(true)
   };

@@ -11,7 +11,6 @@ const { Option, OptGroup } = Select;
 class BankPanel extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props)
 }
   render() {
     return (
@@ -86,7 +85,6 @@ class BankPanel extends React.Component {
 
 
 const mapStateToProps = state => {
-  console.log(state.mapcor)
   return {lat:state.mapcor.lat, lon:state.mapcor.lon}
 
 };

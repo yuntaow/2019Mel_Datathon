@@ -33,7 +33,6 @@ const data = ["Australia", "Korea", "Indonesia", "Malaysia", "Thailand"];
 class BankPanel extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
   }
 
   getCountry = country => {
@@ -174,8 +173,6 @@ class BankPanel extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log("location",state.retrieve);
-
   const ey = state.retrieveData.estimated_yield
   const rev = state.retrieveData.revenue
   const tons = state.retrieveData.estimated_tons

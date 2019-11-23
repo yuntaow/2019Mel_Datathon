@@ -3,7 +3,8 @@ import * as React from 'react';
 import { PureComponent } from 'react';
 import {Button, Input, Icon, Statistic, Row, Col,Card,Select } from "antd"
 // import { ScatterChart, Scatter,AreaChart, Area, LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
-import "./Intro.css"
+import classes from "./Intro.module.css";
+import Logo from "./assets/logo-white.png";
 import { Carousel } from 'antd';
 import {
   BrowserRouter as Router,
@@ -21,27 +22,35 @@ export default class Intro extends React.Component {
   constructor(props) {
     super(props);
 }
+
   render() {
+    const backToDashboard = <Button className={classes.back}><Link to="/dashboard"><Icon type="caret-left" />Back</Link></Button>;
+    const enter = <Button className={classes.Enter}><Link to="/dashboard">Enter</Link></Button>
+    
     return (
-        <div style={{height:"100vh",backgroundColor:"black"}}>
-            <Carousel style={{height:"90vh"}} effect="fade">
-                <div className="ppt-holder">
-                  <img className="ppt" src={require("./11.png")} alt="Italian Trulli"/>
-                  <Button type="primary" style={{margin:"auto",display:"block",marginTop:"2%"}}><Link to="/dashboard">Back to dashboard</Link></Button>
+        <div className={classes.intro}>
+          
+            <Carousel style={{height:"97vh"}} effect="fade">
+            
+                <div className={classes.pptHolder}>
+                  <img className={classes.ppt} src={require("./11.png")} alt="Italian Trulli"/>
                 </div>
-                <div className="ppt-holder">
-                <img className="ppt" src={require("./22.png")} alt="Italian Trulli"/>
-                <Button type="primary" style={{margin:"auto",display:"block",marginTop:"2%"}}><Link to="/dashboard">Back to dashboard</Link></Button>
+                <div className={classes.pptHolder}>
+                <img className={classes.ppt} src={require("./22.png")} alt="Italian Trulli"/>
                 </div>
-                <div className="ppt-holder">
-                <img className="ppt" src={require("./33.png")} alt="Italian Trulli"/>
-                <Button type="primary" style={{margin:"auto",display:"block",marginTop:"2%"}}><Link to="/dashboard">Back to dashboard</Link></Button>
+                <div className={classes.pptHolder}>
+                <img className={classes.ppt} src={require("./33.png")} alt="Italian Trulli"/>
                 </div>
-                <div className="ppt-holder">
-                <img className="ppt" src={require("./44.png")} alt="Italian Trulli"/>
-                <Button type="primary" style={{margin:"auto",display:"block",marginTop:"2%"}}><Link to="/dashboard">Back to dashboard</Link></Button>
+                <div className={classes.splash} >
+                <div className={classes.Logo__box}>
+                  <img src={Logo} className={classes.Logo} />
+                  <h1>Sugero</h1>
+                  {enter}
+                  </div>
                 </div>
               </Carousel>
+
+              {backToDashboard}
         </div>
     );
   }

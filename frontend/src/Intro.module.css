@@ -1,0 +1,93 @@
+.intro {
+  background: linear-gradient(#2948ff, #396afc);
+  font-family: "Poppins", sans-serif !important;
+  height: 100vh;
+}
+
+.splash {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(41, 72, 255, 0.8),
+      rgba(57, 106, 252, 0.8)
+    ),
+    url("./assets/fields.jpg");
+
+  background-size: cover;
+  overflow: hidden;
+
+  height: 100vh;
+  display: block !important;
+}
+
+.pptHolder {
+  height: 90%;
+  background-color: #fff;
+  padding-bottom: 2%;
+}
+.ppt {
+  height: 85vh;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.back {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+
+  color: #fff;
+  background-color: #396afc;
+  border: 2px solid #fff;
+  animation: moveInLeft .5s ease-in-out 0.8;
+}
+
+.Logo__box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.Logo__box h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.Logo {
+  height: 15rem;
+  width: 15rem;
+  margin: 0 auto;
+  display: block;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-4rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.Enter {
+  color: #fff;
+  font-size: 2rem;
+  height: 4rem;
+  width: 10rem;
+  background-color: transparent;
+  border: 3px solid #fff;
+  text-transform: uppercase;
+}
+
+.Enter:hover {
+    border: 3px solid #FFF;
+    color: #2948FF;
+    transform: translateY(-3px);
+}
+
+

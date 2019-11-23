@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "//yuntaow.github.io/2019Mel_Datathon/static/css/main.21d29323.chunk.css",
-    "main.js": "//yuntaow.github.io/2019Mel_Datathon/static/js/main.b2d025a2.chunk.js",
-    "main.js.map": "//yuntaow.github.io/2019Mel_Datathon/static/js/main.b2d025a2.chunk.js.map",
+    "main.js": "//yuntaow.github.io/2019Mel_Datathon/static/js/main.c1b78063.chunk.js",
+    "main.js.map": "//yuntaow.github.io/2019Mel_Datathon/static/js/main.c1b78063.chunk.js.map",
     "runtime-main.js": "//yuntaow.github.io/2019Mel_Datathon/static/js/runtime-main.49943624.js",
     "runtime-main.js.map": "//yuntaow.github.io/2019Mel_Datathon/static/js/runtime-main.49943624.js.map",
     "static/css/2.aa8bac49.chunk.css": "//yuntaow.github.io/2019Mel_Datathon/static/css/2.aa8bac49.chunk.css",
     "static/js/2.7aaf1b54.chunk.js": "//yuntaow.github.io/2019Mel_Datathon/static/js/2.7aaf1b54.chunk.js",
     "static/js/2.7aaf1b54.chunk.js.map": "//yuntaow.github.io/2019Mel_Datathon/static/js/2.7aaf1b54.chunk.js.map",
     "index.html": "//yuntaow.github.io/2019Mel_Datathon/index.html",
-    "precache-manifest.75a1a9841ef47c4cf4d85c1863826e7b.js": "//yuntaow.github.io/2019Mel_Datathon/precache-manifest.75a1a9841ef47c4cf4d85c1863826e7b.js",
+    "precache-manifest.78ea4c37ac929fc1af083717cc3c688b.js": "//yuntaow.github.io/2019Mel_Datathon/precache-manifest.78ea4c37ac929fc1af083717cc3c688b.js",
     "service-worker.js": "//yuntaow.github.io/2019Mel_Datathon/service-worker.js",
     "static/css/2.aa8bac49.chunk.css.map": "//yuntaow.github.io/2019Mel_Datathon/static/css/2.aa8bac49.chunk.css.map",
     "static/css/main.21d29323.chunk.css.map": "//yuntaow.github.io/2019Mel_Datathon/static/css/main.21d29323.chunk.css.map",
@@ -24,6 +24,6 @@
     "static/css/2.aa8bac49.chunk.css",
     "static/js/2.7aaf1b54.chunk.js",
     "static/css/main.21d29323.chunk.css",
-    "static/js/main.b2d025a2.chunk.js"
+    "static/js/main.c1b78063.chunk.js"
   ]
 }

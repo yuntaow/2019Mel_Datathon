@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "//yuntaow.github.io/2019Mel_Datathon/static/css/main.9a72dc73.chunk.css",
-    "main.js": "//yuntaow.github.io/2019Mel_Datathon/static/js/main.c1318378.chunk.js",
-    "main.js.map": "//yuntaow.github.io/2019Mel_Datathon/static/js/main.c1318378.chunk.js.map",
+    "main.css": "//yuntaow.github.io/2019Mel_Datathon/static/css/main.21d29323.chunk.css",
+    "main.js": "//yuntaow.github.io/2019Mel_Datathon/static/js/main.3c750a81.chunk.js",
+    "main.js.map": "//yuntaow.github.io/2019Mel_Datathon/static/js/main.3c750a81.chunk.js.map",
     "runtime-main.js": "//yuntaow.github.io/2019Mel_Datathon/static/js/runtime-main.49943624.js",
     "runtime-main.js.map": "//yuntaow.github.io/2019Mel_Datathon/static/js/runtime-main.49943624.js.map",
     "static/css/2.aa8bac49.chunk.css": "//yuntaow.github.io/2019Mel_Datathon/static/css/2.aa8bac49.chunk.css",
-    "static/js/2.a37d5364.chunk.js": "//yuntaow.github.io/2019Mel_Datathon/static/js/2.a37d5364.chunk.js",
-    "static/js/2.a37d5364.chunk.js.map": "//yuntaow.github.io/2019Mel_Datathon/static/js/2.a37d5364.chunk.js.map",
+    "static/js/2.7aaf1b54.chunk.js": "//yuntaow.github.io/2019Mel_Datathon/static/js/2.7aaf1b54.chunk.js",
+    "static/js/2.7aaf1b54.chunk.js.map": "//yuntaow.github.io/2019Mel_Datathon/static/js/2.7aaf1b54.chunk.js.map",
     "index.html": "//yuntaow.github.io/2019Mel_Datathon/index.html",
-    "precache-manifest.ccffab0147823c57e5ffb163de3aa1ca.js": "//yuntaow.github.io/2019Mel_Datathon/precache-manifest.ccffab0147823c57e5ffb163de3aa1ca.js",
+    "precache-manifest.5dda9917d834eb3aa67a78a00583b79e.js": "//yuntaow.github.io/2019Mel_Datathon/precache-manifest.5dda9917d834eb3aa67a78a00583b79e.js",
     "service-worker.js": "//yuntaow.github.io/2019Mel_Datathon/service-worker.js",
     "static/css/2.aa8bac49.chunk.css.map": "//yuntaow.github.io/2019Mel_Datathon/static/css/2.aa8bac49.chunk.css.map",
-    "static/css/main.9a72dc73.chunk.css.map": "//yuntaow.github.io/2019Mel_Datathon/static/css/main.9a72dc73.chunk.css.map",
+    "static/css/main.21d29323.chunk.css.map": "//yuntaow.github.io/2019Mel_Datathon/static/css/main.21d29323.chunk.css.map",
     "static/media/1.jpeg": "//yuntaow.github.io/2019Mel_Datathon/static/media/1.6f2fb8c1.jpeg",
     "static/media/2.jpeg": "//yuntaow.github.io/2019Mel_Datathon/static/media/2.da9f6711.jpeg",
     "static/media/3.jpeg": "//yuntaow.github.io/2019Mel_Datathon/static/media/3.7eee0cd9.jpeg",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.49943624.js",
     "static/css/2.aa8bac49.chunk.css",
-    "static/js/2.a37d5364.chunk.js",
-    "static/css/main.9a72dc73.chunk.css",
-    "static/js/main.c1318378.chunk.js"
+    "static/js/2.7aaf1b54.chunk.js",
+    "static/css/main.21d29323.chunk.css",
+    "static/js/main.3c750a81.chunk.js"
   ]
 }

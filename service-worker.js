@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "//yuntaow.github.io/2019Mel_Datathon/precache-manifest.ccffab0147823c57e5ffb163de3aa1ca.js"
+  "//yuntaow.github.io/2019Mel_Datathon/precache-manifest.5dda9917d834eb3aa67a78a00583b79e.js"
 );
 
 self.addEventListener('message', (event) => {
@@ -35,5 +35,5 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
 workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("//yuntaow.github.io/2019Mel_Datathon/index.html"), {
   
-  blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
+  blacklist: [/^\/_/,/\/[^/?]+\.[^/]+$/],
 });

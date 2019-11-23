@@ -69,11 +69,11 @@ class Portal extends React.Component {
     console.log(this.props.poly.flat())
     this.setState({ loading: true  });
     setTimeout( ()=>{
-    axios.post('http://167.172.64.47:5000/yield_estimation', {
+    axios.post(' https://cors-anywhere.herokuapp.com/http://167.172.64.47:5000/yield_estimation', {
       "ratoonStartDate" : "2017-09-23",
       "harvestStartDate" : "2017-11-15",
       "latlonlist": this.props.poly.flat(),
-    })
+    }, {timeout : 180000})
     .then((response)=> {
       console.log(response.data);
       this.setState({ loading: false, visible: false});
@@ -84,12 +84,10 @@ class Portal extends React.Component {
         this.setState({
           visible: false,
         });
-
       }
       else{
         this.props.retrieveData(response.data)
         this.props.openModal(false)
-
         this.setState({
           visible: false,
         });
@@ -97,7 +95,11 @@ class Portal extends React.Component {
       }
     })
     .catch(error => {
-      console.log(error);
+      message.error('API is not responding');
+      this.props.openModal(false)
+      this.setState({
+        visible: false,
+      });
     })
     },  1000)
 

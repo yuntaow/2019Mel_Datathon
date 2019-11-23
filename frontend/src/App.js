@@ -71,7 +71,7 @@ class Portal extends React.Component {
       "ratoonStartDate" : "2017-09-23",
       "harvestStartDate" : "2017-11-15",
       "latlonlist": this.props.poly.flat(),
-    }, {timeout : 180000})
+    }, {timeout : 9990000})
     .then((response)=> {
       this.setState({ loading: false, visible: false});
       if (response.data["errorCode"] == 1){

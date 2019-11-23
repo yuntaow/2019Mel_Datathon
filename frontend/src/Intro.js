@@ -23,21 +23,21 @@ export default class Intro extends React.Component {
 }
   render() {
     return (
-        <div style={{backgroundColor:"#e5edf2"}}>
-            <Carousel style={{height:"100vh"}}>
+        <div style={{height:"100vh",backgroundColor:"black"}}>
+            <Carousel style={{height:"90vh"}} effect="fade">
                 <div className="ppt-holder">
-                  <img className="ppt" src={require("./1.jpeg")} alt="Italian Trulli"/>
+                  <img className="ppt" src={require("./11.png")} alt="Italian Trulli"/>
+                  <Button type="primary" style={{margin:"auto",display:"block",marginTop:"2%"}}><Link to="/dashboard">Back to dashboard</Link></Button>
                 </div>
                 <div className="ppt-holder">
-                <img className="ppt" src={require("./2.jpeg")} alt="Italian Trulli"/>
+                <img className="ppt" src={require("./22.png")} alt="Italian Trulli"/>
+                <Button type="primary" style={{margin:"auto",display:"block",marginTop:"2%"}}><Link to="/dashboard">Back to dashboard</Link></Button>
                 </div>
                 <div className="ppt-holder">
-                <img className="ppt" src={require("./3.jpeg")} alt="Italian Trulli"/>
-                </div>
-                <div className="ppt-holder">
-                <Button type="primary" shape="circle"><Link to="/dashboard">Go</Link></Button>
-                </div>
+                <img className="ppt" src={require("./33.png")} alt="Italian Trulli"/>
+                <Button type="primary" style={{margin:"auto",display:"block",marginTop:"2%"}}><Link to="/dashboard">Back to dashboard</Link></Button>
 
+                </div>
               </Carousel>
         </div>
     );

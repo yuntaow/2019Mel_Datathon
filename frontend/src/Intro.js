@@ -36,7 +36,9 @@ export default class Intro extends React.Component {
                 <div className="ppt-holder">
                 <img className="ppt" src={require("./33.png")} alt="Italian Trulli"/>
                 <Button type="primary" style={{margin:"auto",display:"block",marginTop:"2%"}}><Link to="/dashboard">Back to dashboard</Link></Button>
-
+                </div>
+                <img className="ppt" src={require("./44.png")} alt="Italian Trulli"/>
+                <Button type="primary" style={{margin:"auto",display:"block",marginTop:"2%"}}><Link to="/dashboard">Back to dashboard</Link></Button>
                 </div>
               </Carousel>
         </div>

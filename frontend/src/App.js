@@ -55,7 +55,6 @@ class Portal extends React.Component {
     this.setState({
       visible: true,
     });
-    console.log(this.state.data)
   };
 
   hideModal = () => {
@@ -66,7 +65,6 @@ class Portal extends React.Component {
   };
 
   trigger = (coordinates) =>  {
-    console.log(this.props.poly.flat())
     this.setState({ loading: true  });
     setTimeout( ()=>{
     axios.post(' https://cors-anywhere.herokuapp.com/http://167.172.64.47:5000/yield_estimation', {
@@ -75,7 +73,6 @@ class Portal extends React.Component {
       "latlonlist": this.props.poly.flat(),
     }, {timeout : 180000})
     .then((response)=> {
-      console.log(response.data);
       this.setState({ loading: false, visible: false});
       if (response.data["errorCode"] == 1){
         console.log("Error in the backend")

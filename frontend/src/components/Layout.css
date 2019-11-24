@@ -1,0 +1,23 @@
+.ant-layout {
+  background: linear-gradient(to right bottom, #ebeeff, #f4f7fd);
+}
+
+.btn-read {
+  margin-top: 70vh;
+  margin-left: 30px;
+  position: absolute;
+  
+}
+
+.btn-read a {
+    padding: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #b1bcff;
+  transition: all .4s;
+  color: #fff;
+}
+
+.btn-read a:hover {
+    background-color: #396AFC;
+}
